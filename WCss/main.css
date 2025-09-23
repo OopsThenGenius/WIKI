@@ -1,0 +1,143 @@
+body{
+  background-color: black;
+}
+
+/* Video Section */
+.video-section {
+  margin: 40px 0;
+  width: 100%;
+}
+
+.video-section h3 {
+  margin: 10px 20px;
+}
+
+/* Wrapper with arrows */
+.video-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Scrollable container */
+.video-container {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 10px;
+  flex: 1;
+  scrollbar-width: none;     
+  -ms-overflow-style: none;         
+}
+
+/* Snap each card */
+.video-card {
+  flex: 0 0 auto;
+  width: 24%;
+  background: #1e1e1e;
+  border-radius: 8px;
+  scroll-snap-align: start;
+  overflow: hidden;
+  cursor: pointer;
+}
+/* Video Thumb container */
+.video-thumb {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  background: black;
+}
+
+/* Thumbnail image */
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* Zoom thumbnail on hover of entire video card */
+.video-card:hover .video-thumb img {
+  transform: scale(1.05);
+}
+
+/* Video styling */
+.video-thumb video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+
+.video-card h4,
+.video-card p {
+  margin: 8px;
+  color: #fff;
+}
+
+/* Scroll buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  z-index: 2;
+}
+
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Custom scrollbar */
+.video-container::-webkit-scrollbar {
+  display: none;
+}
+
+.video-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.video-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.video-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Mobile: hide scrollbar */
+@media (max-width: 768px) {
+  .video-container::-webkit-scrollbar {
+    display: none;
+  }
+}

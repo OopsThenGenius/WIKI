@@ -1,0 +1,41 @@
+      /* Responsive */
+  @media (max-width: 768px) {
+    .desktop-only {
+      display: none !important;
+    }
+    .nav-icons.mobile-only {
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+    /* When mobile search active, hide nav-icons except search wrapper */
+    nav.search-active .nav-icons.mobile-only:not(.mobile-search-wrapper) {
+      display: none !important;
+    }
+    nav.search-active .mobile-search-wrapper {
+      display: flex !important;
+    }
+  }
+  @media (min-width: 769px) {
+    .mobile-only {
+      display: none !important;
+    }
+    .desktop-only {
+      display: flex;
+    }
+  }
+    /* === Responsive === */
+    @media (max-width: 480px) {
+      .desktop-only { display:none !important; }
+      .mobile-only { display:flex !important; }
+      .banner { min-height:80vh; padding:1rem; background-position:center top; }
+      .banner2 h2 { font-size:1.8rem; }
+      .banner2 p { font-size:1rem; }
+    }
+    @media (min-width:481px) and (max-width:768px) {
+      .desktop-only { display:none !important; }
+      .mobile-only { display:flex !important; }
+      .banner { min-height:70vh; }
+    }
+    

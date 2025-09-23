@@ -1,0 +1,69 @@
+.banner {
+  width: 100%;
+   min-height: 70vh; /*full screen minimum height */
+  background: url('../WImage/Banner/kiss.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  color: rgb(2, 2, 2);
+}
+
+
+.banner2 {
+  max-width: 500px;
+}
+
+.banner2 h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.banner2 .u {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 5px 10px;
+  color: rgb(31, 28, 28);
+  margin-bottom: 20px;
+}
+
+.banner2 p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.banner2 .ep,
+.banner2 .watchlist {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.banner2 .ep {
+    background: rgba(5, 31, 78, 0.2);
+  color: rgb(27, 92, 233);
+}
+
+.banner2 .watchlist {
+  background: rgba(5, 31, 78, 0.2);
+  color: rgb(27, 92, 233);
+}
+
+@media (max-width: 768px) {
+  .banner {
+    min-height: 80vh;
+    background-position: center top;
+  }
+}
+
+
+
+/*======= FOOTER =======*/
+
+footer {
+      background: #004080;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
